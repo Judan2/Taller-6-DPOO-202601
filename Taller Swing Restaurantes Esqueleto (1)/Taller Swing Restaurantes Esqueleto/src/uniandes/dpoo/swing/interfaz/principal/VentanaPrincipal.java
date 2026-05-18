@@ -87,6 +87,14 @@ public class VentanaPrincipal extends JFrame
     public void mostrarVentanaMapa( )
     {
         // TODO completar mostrarVentanaMapa
+    	if(ventanaMapa == null || !this.ventanaMapa.isVisible()) {
+    		List<Restaurante> todos = this.mundo.getRestaurantes(true);
+    		this.ventanaMapa = new VentanaMapa(this, todos);
+    		ventanaMapa.setVisible(true);
+    		
+    	}
+    	
+    	
     }
 
     /**

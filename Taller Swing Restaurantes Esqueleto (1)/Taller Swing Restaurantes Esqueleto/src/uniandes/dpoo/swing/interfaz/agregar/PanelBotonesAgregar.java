@@ -24,7 +24,7 @@ public class PanelBotonesAgregar extends JPanel implements ActionListener
     private JButton butNuevo;
     private JButton butCerrar;
 
-    /**
+    /*
      * La ventana principal de la aplicación
      */
     private VentanaAgregarRestaurante ventanaPrincipal;
@@ -34,15 +34,21 @@ public class PanelBotonesAgregar extends JPanel implements ActionListener
         this.ventanaPrincipal = ventanaPrincipal;
 
         setLayout( new FlowLayout( ) );
-//en este caso no tendria que crear un panel 
+
         // Agrega el botón para crear el restaurante
         // TODO completar hacer un add
-        JFrame ventana = new JFrame("app de prueba");
-        
+        this.butNuevo = new JButton(PanelBotonesAgregar.CREAR);
+        this.butNuevo.addActionListener(this); //que hace accion listener realmente ??
+        add(this.butNuevo);
 
-        // Agrga el boton para cerrar la ventana
+        // Agrega el boton para cerrar la ventana
         // TODO completar
+        this.butCerrar = new JButton(PanelBotonesAgregar.CERRAR);
+        this.butCerrar.addActionListener(this);
+        add(this.butCerrar);
+        
     }
+    
 
     @Override
     public void actionPerformed( ActionEvent e )

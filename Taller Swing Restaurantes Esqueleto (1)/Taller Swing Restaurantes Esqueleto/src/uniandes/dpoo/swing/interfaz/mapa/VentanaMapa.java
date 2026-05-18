@@ -29,7 +29,7 @@ public class VentanaMapa extends JFrame implements ActionListener
     /**
      * El panel con el mapa
      */
-    private PanelMapaVisualizar panelMapa;
+    private PanelMapaVisualizar panelMapa; //donde se saca esto? (a)
 
     /**
      * El radio button para hacer que se muestren todos los restaurantes. Si este está activo, radioVisitados debe estar inactivo.
@@ -52,9 +52,17 @@ public class VentanaMapa extends JFrame implements ActionListener
 
         // Agrega el panel donde se muestra el mapa
         // TODO completar
+        
+        this.panelMapa = new PanelMapaVisualizar();//a
+        add(panelMapa);
 
         // Agrega el panel con los RadioButtons y los configura
         // TODO completar
+         this.radioTodos = new JRadioButton();
+         add(radioTodos);
+         
+         this.radioVisitados = new JRadioButton();
+         add(radioVisitados);
 
         // Termina de configurar la ventana y la muestra
         pack( );

@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 @SuppressWarnings("serial")
@@ -33,9 +34,11 @@ public class PanelBotonesAgregar extends JPanel implements ActionListener
         this.ventanaPrincipal = ventanaPrincipal;
 
         setLayout( new FlowLayout( ) );
-
+//en este caso no tendria que crear un panel 
         // Agrega el botón para crear el restaurante
-        // TODO completar
+        // TODO completar hacer un add
+        JFrame ventana = new JFrame("app de prueba");
+        
 
         // Agrga el boton para cerrar la ventana
         // TODO completar

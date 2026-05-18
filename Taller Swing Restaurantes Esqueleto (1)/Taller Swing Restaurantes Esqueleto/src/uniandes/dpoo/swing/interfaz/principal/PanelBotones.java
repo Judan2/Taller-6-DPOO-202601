@@ -32,9 +32,13 @@ public class PanelBotones extends JPanel implements ActionListener
 
         // Agrega el botón para crear un nuevo restaurante
         // TODO completar
+        
+        butNuevo = new JButton(PanelBotones.NUEVO); 
 
         // Agrega el botón para ver todos los restaurantes
         // TODO completar
+        
+        this.butVerTodos = new JButton(PanelBotones.VER);
     }
 
     @Override

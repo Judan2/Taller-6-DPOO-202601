@@ -36,12 +36,12 @@ public class PanelDetallesRestaurante extends JPanel
 
         // Configura la etiqueta para la calificación
         // TODO completar el constructor
-    	this.labCalificacion = new JLabel("Calificación: ");
+    	this.labCalificacion = new JLabel( ); // va con texxto o no? 
 
         // Configura el checkbox para indicar si ya se visitaó o no el restaurante
         // TODO completar el constructor
     	
-    	this.chkVisitado = new JCheckBox("Ha sido Visitado: ");
+    	this.chkVisitado = new JCheckBox("¿Ha sido Visitado?");
 
         // Organiza los elementos en la venta
         // TODO completar el constructor
@@ -63,7 +63,7 @@ public class PanelDetallesRestaurante extends JPanel
      // TODO completar actualizarRestaurante
     	//como actualizo un restaurante 
     	
-    	this.labNombre.setText("Nombre:" + nombre );
+    	this.labNombre.setText("Nombre: " + nombre );
     	this.labCalificacion.setIcon(this.buscarIconoCalificacion(calificacion));
     	this.chkVisitado.setSelected(visitado);
     		

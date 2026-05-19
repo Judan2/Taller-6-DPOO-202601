@@ -27,31 +27,33 @@ public class PanelEditarRestaurante extends JPanel
     private JComboBox<String> cbbVisitado;
 
     public PanelEditarRestaurante( )
-    {
+    {	
+    	setLayout(new GridLayout(3,2));
         // Crea el campo para el nombre con una etiqueta al frente
         // TODO completar
     	
     	add(new JLabel("Nombre: "));
     	this.txtNombre = new JTextField(15);
+    	add(this.txtNombre);
     	
         // Crea el selector para la calificación con una etiqueta al frente
         // TODO completar
     	
     	add(new JLabel("Calificacion: "));
     	this.cbbCalificacion = new JComboBox<>(new String [] {"1", "2", "3", "4", "5"});
-    	
+    	add(this.cbbCalificacion);
         // Crea el selector para indicar si ya ha sido visitado, con una etiqueta al frente
         // TODO completar
     	
     	add(new JLabel("¿Visitado?"));
     	this.cbbVisitado= new JComboBox<>(new String[] {"Sí", "No"});
-    	
+    	add(this.cbbVisitado);
+
         // Agregar todos los elementos al panel
         // TODO completar
-    	add(this.txtNombre);
-    	add(this.cbbCalificacion);
-    	add(this.cbbCalificacion);
-
+    	
+    	
+    	
     }
 
     /**

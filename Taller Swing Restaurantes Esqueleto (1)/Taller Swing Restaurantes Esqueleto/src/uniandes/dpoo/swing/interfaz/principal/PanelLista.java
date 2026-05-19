@@ -86,7 +86,7 @@ public class PanelLista extends JPanel implements ListSelectionListener
      */
     public void seleccionarRestaurante( Restaurante restaurante )
     {
-        listaDeRestaurantes.setSelectedValue( restaurante, true );
+        listaDeRestaurantes.setSelectedValue( restaurante, true ); 
     }
 
 }

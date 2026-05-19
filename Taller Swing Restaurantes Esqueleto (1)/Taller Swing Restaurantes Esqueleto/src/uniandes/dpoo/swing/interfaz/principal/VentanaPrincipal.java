@@ -107,7 +107,10 @@ public class VentanaPrincipal extends JFrame
      */
     public void agregarRestaurante( String nombre, int calificacion, int x, int y, boolean visitado )
     {
-        // TODO completar agregarRestaurante
+        // Completado agregarRestaurante
+    	this.mundo.agregarRestaurante(new Restaurante (nombre, calificacion ,x,y, visitado));
+    	this.actualizarRestaurantes();
+    	
     }
 
     /**
@@ -129,6 +132,12 @@ public class VentanaPrincipal extends JFrame
     {
         List<Restaurante> todos = this.mundo.getRestaurantes( true );
         // TODO completar actualizarRestaurantes
+        pLista.actualizarRestaurantes(todos);
+        if (!todos.isEmpty()) {
+        	pDetalles.actualizarRestaurante(todos.get(0));
+        }
+        
+        
     }
 
     /**

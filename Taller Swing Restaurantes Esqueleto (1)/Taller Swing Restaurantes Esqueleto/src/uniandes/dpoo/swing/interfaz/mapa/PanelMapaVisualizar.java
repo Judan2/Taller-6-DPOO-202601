@@ -2,6 +2,7 @@ package uniandes.dpoo.swing.interfaz.mapa;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.util.List;
@@ -25,20 +26,25 @@ public class PanelMapaVisualizar extends JPanel
      * La lista de restaurantes que se están dibujando en el mapa
      */
     private List<Restaurante> restaurantes;
-
+  //temporal 
+    /**
+    ImageIcon icon = new ImageIcon("./imagenes/mapa.png");
+    System.out.println("Ancho imagen: " + icon.getIconWidth());
+    **/
+    //
     public PanelMapaVisualizar( )
-    {
-        this.labMapa = new JLabel( new ImageIcon( "./imagenes/mapa.png" ) );
-        labMapa.setBorder( new LineBorder( Color.DARK_GRAY ) );
-        add( labMapa, BorderLayout.CENTER );
+    {   
+        setPreferredSize(new Dimension(447, 447));
     }
 
     @Override
-    public void paint( Graphics g )
+    public void paintComponent( Graphics g )
     {
-        super.paint( g );
+        super.paintComponent( g );
         Graphics2D g2d = ( Graphics2D )g;
-//por un s
+        
+        g2d.drawImage(new ImageIcon("./imagenes/mapa.png").getImage(), 0, 0, this);
+        
      // TODO completar y hacer que se vean los nombres de todos los restaurantes en el mapa
      if (this.restaurantes != null) {
     	 for (Restaurante r :restaurantes)
@@ -47,14 +53,11 @@ public class PanelMapaVisualizar extends JPanel
     		 g2d.fillOval(r.getX(), r.getY(), 10, 10);
     		 
     		 g2d.setColor(Color.BLACK);
-    		 g2d.drawString(r.getNombre(), r.getX(), r.getY());
+    		 g2d.drawString(r.getNombre(), r.getX(), r.getY()-5);
     	 }
     	 
      }
-        
-        
-        
-        
+     
     }
 
     /**

@@ -52,6 +52,10 @@ public class PanelDetallesRestaurante extends JPanel
     	add(this.labNombre);
     	add(this.labCalificacion);
     	add(this.chkVisitado);
+    	this.chkVisitado.setEnabled(false);
+    	
+    	
+
     }
 
     /**
@@ -71,6 +75,7 @@ public class PanelDetallesRestaurante extends JPanel
     	this.labCalificacion.setHorizontalTextPosition(JLabel.LEFT);
     	this.chkVisitado.setHorizontalTextPosition(JLabel.LEFT);
     	this.chkVisitado.setSelected(visitado);
+    	//this.chkVisitado.setEnabled(visitado);
     		
     }
 

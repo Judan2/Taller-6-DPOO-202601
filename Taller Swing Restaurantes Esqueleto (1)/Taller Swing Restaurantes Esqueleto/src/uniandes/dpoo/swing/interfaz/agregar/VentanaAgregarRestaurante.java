@@ -1,6 +1,7 @@
 package uniandes.dpoo.swing.interfaz.agregar;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -34,7 +35,7 @@ public class VentanaAgregarRestaurante extends JFrame
     {
         this.ventanaPrincipal = principal;
         setLayout( new BorderLayout( ) );
-
+        setTitle("Agregar Restaurante");
         // Agrega el panel donde va a estar el mapa
         // TODO completar
         panelMapa = new PanelMapaAgregar();
@@ -49,11 +50,13 @@ public class VentanaAgregarRestaurante extends JFrame
         panelBotones  = new PanelBotonesAgregar(this);
         panelSur.add(panelDetalles, BorderLayout.CENTER);
         panelSur.add(panelBotones,  BorderLayout.SOUTH);
+        //panelSur.setPreferredSize(new Dimension(447, 200));
         add(panelSur, BorderLayout.SOUTH);
 
         // Termina de configurar la ventana
-        pack( );
+        pack();
         setLocationRelativeTo( null );
+       
         setDefaultCloseOperation( DISPOSE_ON_CLOSE );
         setResizable( false );
     }
